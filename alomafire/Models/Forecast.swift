@@ -7,35 +7,18 @@
 
 import Foundation
 
-struct ForeCast: Codable {
+// MARK: - Forecast
+struct Forecast: Codable {
     
-    let sign: Signs?
+    let dateRange: String?
+    let currentDate: String?
+    let description: String?
+    let compatibility: String?
+    let mood: String?
+    let color: String?
     let luckyNumber: String?
     let luckyTime: String?
-    let description: String?
-    let currentDate: String?
   
-    enum CodingKeys: String, CodingKey {
-        case sign
-        case luckyNumber
-        case luckyTime
-        case description
-        case currentDate
-    }
 }
 
-enum Signs: String, CaseIterable, Codable {
-    
-    case aries = "Aries"
-    case taurus = "Taurus"
-    case gemini = "Gemini"
-    case cancer = "Cancer"
-    case leo = "Leo"
-    case virgo = "Virgo"
-    case libra = "Libra"
-    case scorpio = "Scorpio"
-    case sagittarius = "Sagittarius"
-    case capricorn = "Capricorn"
-    case aquarius = "Aquarius"
-    case pisces = "Pisces"
-}
+
